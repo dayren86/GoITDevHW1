@@ -1,0 +1,26 @@
+[
+  {
+    "product": "A",
+    "price": 1.25,
+    "discountQuantity": 3,
+    "discountPrice": 3.00
+  },
+  {
+    "product": "B",
+    "price": 4.25,
+    "discountQuantity": null,
+    "discountPrice": null
+  },
+  {
+    "product": "C",
+    "price": 1.00,
+    "discountQuantity": 6,
+    "discountPrice": 5.00
+  },
+  {
+    "product": "D",
+    "price": 0.75,
+    "discountQuantity": null,
+    "discountPrice": null
+  }
+]

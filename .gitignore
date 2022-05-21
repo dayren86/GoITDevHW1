@@ -1,0 +1,6 @@
+.idea
+.gitignore
+# Project exclude paths
+/.gradle/
+build
+gradle
