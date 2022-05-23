@@ -21,6 +21,7 @@ public class StoreTest {
         for (Map.Entry<String, Integer> stringIntegerEntry : expected.entrySet()) {
             for (Products product : products) {
                 if (product.getProduct().equals(stringIntegerEntry.getKey())) {
+                    //also, the Product class doesn't have any amount field :/
                     Assertions.assertEquals(stringIntegerEntry.getValue(), product.getAmount());
                 }
             }
@@ -30,6 +31,7 @@ public class StoreTest {
     @Test
     public void testDiscountProducts() {
         Store store = new Store();
+        //Actually I'm confused here, you call calculateDiscount() method but Store class doesn't have any
         double actual = store.calculateDiscount(store.calculateQuantityProducts(" ABCDABA"));
         Assertions.assertEquals(13.25,actual);
         //double actual = store.calculateDiscount(store.calculateQuantityProducts("CCDDCA   BDDBACCCAA));

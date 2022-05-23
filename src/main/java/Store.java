@@ -32,6 +32,7 @@ public class Store {
         for (int i = 0; i < products.size(); i++) {
 
             if (products.get(i).getDiscountPrice() != 0) {
+                //it's nice to extract such logic in separate private method with meaningful name
                 result += products.get(i).getAmount() / products.get(i).getDiscountQuantity() * products.get(i).getDiscountPrice() +
                         products.get(i).getAmount() % products.get(i).getDiscountQuantity() * products.get(i).getPrice();
             } else {
