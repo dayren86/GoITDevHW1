@@ -32,9 +32,9 @@ public class StoreTest {
     public void testDiscountProducts() {
         Store store = new Store();
         //Actually I'm confused here, you call calculateDiscount() method but Store class doesn't have any
-        double actual = store.calculateDiscount(store.calculateQuantityProducts(" ABCDABA"));
+        double actual = store.discount(store.calculateQuantityProducts(" ABCDABA"));
         Assertions.assertEquals(13.25,actual);
-        //double actual = store.calculateDiscount(store.calculateQuantityProducts("CCDDCA   BDDBACCCAA));
+        //double actual = store.discount(store.calculateQuantityProducts("CCDDCA   BDDBACCCAA));
         //Assertions.assertEquals(20.75,actual);
     }
 }

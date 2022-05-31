@@ -6,4 +6,5 @@ public class Products {
     private double price;
     private int discountQuantity;
     private double discountPrice;
+    int amount;
 }

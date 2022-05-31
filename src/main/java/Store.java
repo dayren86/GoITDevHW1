@@ -33,13 +33,13 @@ public class Store {
 
             if (products.get(i).getDiscountPrice() != 0) {
                 //it's nice to extract such logic in separate private method with meaningful name
-                result += products.get(i).getAmount() / products.get(i).getDiscountQuantity() * products.get(i).getDiscountPrice() +
-                        products.get(i).getAmount() % products.get(i).getDiscountQuantity() * products.get(i).getPrice();
+                double sale = products.get(i).getAmount() / products.get(i).getDiscountQuantity();
+                double remainder = products.get(i).getAmount() % products.get(i).getDiscountQuantity();
+                result += sale * products.get(i).getDiscountPrice() + remainder * products.get(i).getPrice();
             } else {
                 result += products.get(i).getAmount() * products.get(i).getPrice();
             }
         }
         return result;
-
     }
 }
